@@ -8,7 +8,7 @@ public class SoccerBallKick : MonoBehaviour
     public GameObject player;
     public GameObject house;
     public GameObject allen;
-    public static bool isKicked;
+    private static bool isKicked;
     private bool hasHitFace;
     private static GameObject ball;
     private static GameObject allenStatic;
@@ -51,10 +51,11 @@ public class SoccerBallKick : MonoBehaviour
             }
             return;
         }
-        /*if (house.GetComponent<Renderer>().bounds.Contains(ball.transform.position) == false)
+        if (house.GetComponent<Renderer>().bounds.Contains(ball.transform.position) == false)
         {
-            SceneManager.LoadScene("MainScene");
-        }*/
+            isKicked = false;
+            //SceneManager.LoadScene("MainScene");
+        }
         transform.position = transform.position + diff;    
        
 
