@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5344177011071760263, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.63
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 5344177011071760263, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.23
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5344177011071760263, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
       propertyPath: m_LocalPosition.z
@@ -356,12 +356,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -565,7 +573,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -638,7 +646,7 @@ Transform:
   m_GameObject: {fileID: 1028211445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -712,11 +720,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 19.458141, y: -3.9408255}
-  - {x: -17.965412, y: -4.079438}
-  - {x: -18, y: 6}
-  - {x: 19.47, y: 6}
-  - {x: 19.430826, y: -3.880583}
+  - {x: 20.012524, y: -4.39441}
+  - {x: -18.872585, y: -4.63382}
+  - {x: -18.90717, y: 6.201593}
+  - {x: 20.28316, y: 6.1239614}
+  - {x: 20.346136, y: -4.311003}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -984,4 +992,3 @@ MonoBehaviour:
   thePlayer: {fileID: 1791178008}
   mission: {fileID: 11400000, guid: c965550562c78a14e9f38c1feb073a49, type: 2}
   stickScript: {fileID: 4971322003993033013, guid: 52eeea7a12f0c8140a15471a2b8b49ec, type: 3}
-  holdingDog: 0
