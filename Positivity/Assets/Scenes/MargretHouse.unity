@@ -620,6 +620,11 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &2083948957
 Transform:
+  m_CorrespondingSourceObject: {fileID: 3885516360520271575, guid: 3dd9950c239743b4ebe333b795e799c8, type: 3}
+  m_PrefabInstance: {fileID: 1621348536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1621348536
+PrefabInstance:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
