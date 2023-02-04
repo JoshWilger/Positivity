@@ -26,7 +26,9 @@ public class LevelSelectorInteraction : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.W) == false)
+        float verticalInput = Input.GetAxis("Vertical");
+
+        if (verticalInput <= 0)
         {
             return;
         }
