@@ -40,13 +40,13 @@ public class LevelSelectorInteraction : MonoBehaviour
                 SceneManager.LoadScene("GroundArea");
                 break;
             case "GreenHouse":
-                SceneManager.LoadScene("GroundArea");
+                SceneManager.LoadScene("CarlyHouse");
                 break;
             case "OrangeHouse":
-                SceneManager.LoadScene("GroundArea");
+                SceneManager.LoadScene("AllenHouse");
                 break;
             case "PurpleHouse":
-                SceneManager.LoadScene("GroundArea");
+                SceneManager.LoadScene("MargretHouse");
                 break;
             case "RedHouse":
                 SceneManager.LoadScene("GroundArea");

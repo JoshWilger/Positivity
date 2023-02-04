@@ -14,6 +14,6 @@ public class StartScreen : MonoBehaviour
     }
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene("LevelSelector");
+        SceneManager.LoadScene("MainScene");
     }
 }

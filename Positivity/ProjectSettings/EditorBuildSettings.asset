@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MargretHouse.unity
     guid: 771de79dac7453d40973f78ea24aa739
+  - enabled: 1
+    path: Assets/Scenes/AllenHouse.unity
+    guid: 87f0c53153ce39541bf620c3b7877da4
   m_configObjects: {}
