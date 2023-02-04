@@ -2010,6 +2010,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5344177011071760263, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
   m_PrefabInstance: {fileID: 5344177011811001254}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1013978146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013978140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30b03d0f187931498ff348a17501bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPosition: {fileID: 1013978145}
+  canPosition: {fileID: 138921115}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1129403075
 GameObject:
   m_ObjectHideFlags: 0

@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 5344177011071760312}
   - component: {fileID: 5344177011071760260}
   - component: {fileID: 5344177011071760315}
-  - component: {fileID: 5344177011071760261}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -243,22 +242,6 @@ MonoBehaviour:
   moveSpeed: 5
   jumpAmount: 2
   JumpSound: {fileID: 5344177011393770129}
---- !u!114 &5344177011071760261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5344177011071760314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30b03d0f187931498ff348a17501bf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPosition: {fileID: 5344177011071760263}
-  detectionLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &5344177011393770131
 GameObject:
   m_ObjectHideFlags: 0
