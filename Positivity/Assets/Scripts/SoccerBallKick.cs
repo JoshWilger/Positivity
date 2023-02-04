@@ -53,7 +53,8 @@ public class SoccerBallKick : MonoBehaviour
         }
         if (house.GetComponent<Renderer>().bounds.Contains(ball.transform.position) == false)
         {
-            SceneManager.LoadScene("MainScene");
+            isKicked = false;
+            //SceneManager.LoadScene("MainScene");
         }
         transform.position = transform.position + diff;    
        
