@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D coll;
     private float dirX;
     private float dirY;
+    public AudioSource JumpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y + jumpAmount);
+            JumpSound.Play();
         }
     }
 }
