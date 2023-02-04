@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoccerBallKick : MonoBehaviour
 {
     public GameObject player;
+    public GameObject house;
     private static bool isKicked;
     private bool hasHitFace;
     private static GameObject ball;
@@ -36,14 +38,13 @@ public class SoccerBallKick : MonoBehaviour
             }
             return;
         }
-
-       transform.position = transform.position + diff;    
+        if (house.GetComponent<Renderer>().bounds.Contains(ball.transform.position) == false)
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+        transform.position = transform.position + diff;    
        
 
-    }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
     public static void KickBall(Transform player)
     {
