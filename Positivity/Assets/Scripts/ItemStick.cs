@@ -12,7 +12,11 @@ public class ItemStick : MonoBehaviour
     private GameObject theOtherObject = null;
     private Rigidbody2D rb;
     private bool completed = false;
+    private bool pickedUp = false;
+    private bool completedSound = false;
     private int currentIndex = 0;
+    public AudioSource pickUpSound;
+    public AudioSource emptySound;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +42,11 @@ public class ItemStick : MonoBehaviour
         }
         if (collision.gameObject == player && !completed)
         {
+            if(pickedUp == false)
+            {
+                pickedUp = true;
+                pickUpSound.Play();
+            }
             theOtherObject = collision.gameObject;
             rb.bodyType = RigidbodyType2D.Kinematic;
             offset = transform.position - theOtherObject.transform.position;
@@ -50,6 +59,11 @@ public class ItemStick : MonoBehaviour
 
         if (completed)
         {
+            if (completedSound == false)
+            {
+                completedSound = true;
+                emptySound.Play();
+            }
             rb.bodyType = RigidbodyType2D.Dynamic;
             theOtherObject = collision.gameObject;
             offset = transform.position - theOtherObject.transform.position;

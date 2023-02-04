@@ -9,6 +9,8 @@ public class ItemSpriteSwap : MonoBehaviour
 
     private SpriteRenderer render;
 
+    public AudioSource fillSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class ItemSpriteSwap : MonoBehaviour
     {
         if (collision.gameObject == objective)
         {
+            fillSound.Play();
             render.sprite = newSprite;
         }
     }
