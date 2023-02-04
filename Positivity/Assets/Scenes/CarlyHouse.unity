@@ -723,7 +723,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719014288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 730eb2c916a3f17459bf07f684fc72a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e7cc516b2d3fb04b8f647de0d3c0bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPCText: {fileID: 1024209374}
@@ -731,6 +731,8 @@ MonoBehaviour:
   pressSpace: {fileID: 2144153419}
   theNPC: {fileID: 1886365589}
   thePlayer: {fileID: 1719014288}
+  mission: {fileID: 11400000, guid: c965550562c78a14e9f38c1feb073a49, type: 2}
+  stickScript: {fileID: 4971322003993033013, guid: 52eeea7a12f0c8140a15471a2b8b49ec, type: 3}
 --- !u!1 &1886365589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2282010716562308550, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}

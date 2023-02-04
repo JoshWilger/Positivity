@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-public class NPCDialogue : MonoBehaviour
+public class AllenDialogue : MonoBehaviour
 {
-
     [SerializeField] private TMP_Text NPCText;
     [SerializeField] private Image theImg;
     [SerializeField] private TMP_Text pressSpace;
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject thePlayer;
+
     [SerializeField] private MissionClass mission;
     [SerializeField] private ItemStick stickScript;
 
@@ -30,7 +29,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void Deactivate()
@@ -44,7 +43,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (collission.gameObject == theNPC)
         {
-            if(stickScript.completed == true)
+            if (stickScript.completed == false)
             {
                 theImg.enabled = true;
                 NPCText.text = "I lost my favorite toy dog! How will I ever be happy again!";
