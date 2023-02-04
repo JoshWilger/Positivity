@@ -37,7 +37,7 @@ public class LevelSelectorInteraction : MonoBehaviour
         switch (item.name)
         {
             case "BlueHouse":
-                SceneManager.LoadScene("GroundArea");
+                SceneManager.LoadScene("TommyHouse");
                 break;
             case "GreenHouse":
                 SceneManager.LoadScene("CarlyHouse");
@@ -49,7 +49,7 @@ public class LevelSelectorInteraction : MonoBehaviour
                 SceneManager.LoadScene("MargretHouse");
                 break;
             case "RedHouse":
-                SceneManager.LoadScene("GroundArea");
+                SceneManager.LoadScene("BenHouse");
                 break;
         }
         
