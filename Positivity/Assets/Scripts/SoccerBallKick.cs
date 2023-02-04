@@ -27,6 +27,6 @@ public class SoccerBallKick : MonoBehaviour
         diff = (ball.transform.position - player.position);
         diff.x = diff.x * 0.1f;
         diff.y = diff.y * 0.1f;
-      
+
     }
 }
