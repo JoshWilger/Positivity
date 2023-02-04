@@ -16,8 +16,7 @@ public class TommyDialogue : MonoBehaviour
 
     [SerializeField] private MissionClass mission;
     [SerializeField] private ItemStick stickScript;
-
-    bool holdingDog = false;
+    [SerializeField] private Animator anim;
 
 
     // Start is called before the first frame update
@@ -26,6 +25,11 @@ public class TommyDialogue : MonoBehaviour
         theImg.enabled = false;
         NPCText.text = "";
         pressSpace.text = "";
+
+        if (stickScript.completed == true)
+        {
+            anim.SetTrigger("better");
+        }
     }
 
     // Update is called once per frame
