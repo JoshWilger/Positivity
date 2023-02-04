@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemStick : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject[] objectives;
+    [SerializeField] private MissionClass mission;
 
     private Vector3 offset = new();
     private GameObject collidedObject = null;
@@ -42,10 +42,10 @@ public class ItemStick : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
             offset = transform.position - theOtherObject.transform.position;
         }
-        else if (collision.gameObject == objectives[currentIndex])
+        if (collision.gameObject.name == mission.objectives[currentIndex].name)
         {
             currentIndex++;
-            completed = currentIndex == objectives.Length;
+            completed = currentIndex == mission.objectives.Length;
         }
 
         if (completed)
