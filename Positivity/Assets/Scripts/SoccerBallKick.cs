@@ -28,11 +28,21 @@ public class SoccerBallKick : MonoBehaviour
             return;
         }
 
+        if (diff.x < 0)
+        {
+            ball.transform.Rotate(Vector3.forward, 1000f * Time.deltaTime);
+        }
+        else
+        {
+
+            ball.transform.Rotate(Vector3.forward, -1000f * Time.deltaTime);
+        }
         if (hasHitFace == false)
         {
             //make it go toward the face.
-            transform.position = Vector3.MoveTowards(transform.position, playerFacePosition, speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, playerFacePosition) < 0.01f)
+            var currentPlayerPosition = new Vector3(player.transform.position.x, playerFacePosition.y, playerFacePosition.z);
+            transform.position = Vector3.MoveTowards(transform.position, currentPlayerPosition, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, currentPlayerPosition) < 0.01f)
             {
                 hasHitFace = true;
             }
