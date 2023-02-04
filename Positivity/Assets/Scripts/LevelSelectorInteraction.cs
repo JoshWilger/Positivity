@@ -7,8 +7,8 @@ public class LevelSelectorInteraction : MonoBehaviour
 {
     //Property For The BlueHouse
 
-    public Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
+    public Transform playerPosition;
+    private const float detectionRadius = 0.00001f;
     public LayerMask detectionLayer;
 
     // Start is called before the first frame update
@@ -20,20 +20,36 @@ public class LevelSelectorInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DetectObject())
+
+        var item = Physics2D.OverlapCircle(playerPosition.position, detectionRadius, detectionLayer);
+        if (item == null)
         {
-            if (InteractInput())
-            {
-                SceneManager.LoadScene("GroundArea");
-            }
+            return;
         }
-    }
-    bool InteractInput()
-    {
-        return Input.GetKeyDown(KeyCode.W);
-    }
-    bool DetectObject()
-    {
-        return Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
+        if (Input.GetKeyDown(KeyCode.W) == false)
+        {
+            return;
+        }
+        
+         Debug.Log(item.name);
+        switch (item.name)
+        {
+            case "BlueHouse":
+                SceneManager.LoadScene("GroundArea");
+                break;
+            case "GreenHouse":
+                SceneManager.LoadScene("GroundArea");
+                break;
+            case "OrangeHouse":
+                SceneManager.LoadScene("GroundArea");
+                break;
+            case "PurpleHouse":
+                SceneManager.LoadScene("GroundArea");
+                break;
+            case "RedHouse":
+                SceneManager.LoadScene("GroundArea");
+                break;
+        }
+        
     }
 }
