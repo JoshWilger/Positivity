@@ -7,16 +7,19 @@ public class SoccerBallKick : MonoBehaviour
 {
     public GameObject player;
     public GameObject house;
+    public GameObject allen;
     private static bool isKicked;
     private bool hasHitFace;
     private static GameObject ball;
+    private static GameObject allenStatic;
     private static Vector3 playerFacePosition;
     private static Vector3 diff;
-    private const float speed = 2.0f;
+    private const float rotateSpeed = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
         ball = gameObject;
+        allenStatic = allen;
         isKicked = false;
     }
 
@@ -40,8 +43,8 @@ public class SoccerBallKick : MonoBehaviour
         if (hasHitFace == false)
         {
             //make it go toward the face.
-            var currentPlayerPosition = new Vector3(player.transform.position.x, playerFacePosition.y, playerFacePosition.z);
-            transform.position = Vector3.MoveTowards(transform.position, currentPlayerPosition, speed * Time.deltaTime);
+            var currentPlayerPosition = new Vector3(allen.transform.position.x, playerFacePosition.y, playerFacePosition.z);
+            transform.position = Vector3.MoveTowards(transform.position, currentPlayerPosition, rotateSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, currentPlayerPosition) < 0.01f)
             {
                 hasHitFace = true;
@@ -63,10 +66,11 @@ public class SoccerBallKick : MonoBehaviour
             return;
         }
         isKicked = true;
-        diff = (ball.transform.position - player.position);
-        diff.x = diff.x * 0.1f;
-        diff.y = diff.y * 0.1f;
+        diff = (ball.transform.position - allenStatic.transform.position);
+        diff.x = diff.x * 0.05f;
+        diff.y = diff.y * 0.05f;
+        
 
-        playerFacePosition = player.position + new Vector3(0.0f, 0.4f, 0.0f);
+        playerFacePosition = allenStatic.transform.position + new Vector3(0.0f, 0.4f, 0.0f);
     }
 }
