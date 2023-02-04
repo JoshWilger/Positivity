@@ -11,7 +11,7 @@ public class ItemStick : MonoBehaviour
     private GameObject collidedObject = null;
     private GameObject theOtherObject = null;
     private Rigidbody2D rb;
-    private bool completed = false;
+    public bool completed = false;
     private bool pickedUp = false;
     private bool completedSound = false;
     private int currentIndex = 0;
@@ -38,6 +38,7 @@ public class ItemStick : MonoBehaviour
     {
         if (completed)
         {
+            Debug.Log("yay!");
             return;
         }
         if (collision.gameObject == player && !completed)
@@ -55,6 +56,7 @@ public class ItemStick : MonoBehaviour
         {
             currentIndex++;
             completed = currentIndex == mission.objectives.Length;
+            Debug.Log("Index: " + currentIndex);
         }
 
         if (completed)
