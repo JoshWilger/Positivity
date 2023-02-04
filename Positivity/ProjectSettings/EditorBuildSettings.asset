@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AllenHouse.unity
     guid: 87f0c53153ce39541bf620c3b7877da4
+  - enabled: 1
+    path: Assets/Scenes/TommyHouse.unity
+    guid: cf53ffa452830ac4fa77fdd9cbb8054d
+  - enabled: 1
+    path: Assets/Scenes/BenHouse.unity
+    guid: d69997989589a6f43a8e46a7273b687c
   m_configObjects: {}
