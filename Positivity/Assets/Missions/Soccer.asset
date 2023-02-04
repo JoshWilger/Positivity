@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Soccer
   m_EditorClassIdentifier: 
   objectives:
-  - {fileID: 0}
+  - {fileID: 7442375730044557374, guid: 88edfd55e91a5834f9a3c008c3b33857, type: 3}
