@@ -38,7 +38,6 @@ public class ItemStick : MonoBehaviour
     {
         if (completed)
         {
-            Debug.Log("yay!");
             return;
         }
         if (collision.gameObject == player && !completed)
@@ -56,7 +55,6 @@ public class ItemStick : MonoBehaviour
         {
             currentIndex++;
             completed = currentIndex == mission.objectives.Length;
-            Debug.Log("Index: " + currentIndex);
         }
 
         if (completed)
