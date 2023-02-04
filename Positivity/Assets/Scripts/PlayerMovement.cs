@@ -25,7 +25,13 @@ public class PlayerMovement : MonoBehaviour
     {
         dirX = Input.GetAxis("Horizontal");
         //dirY = Input.GetAxis("Vertical");
-
+        if(dirX < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-2, 2, 3);
+        }
+        else if(dirX > 0){
+            gameObject.transform.localScale = new Vector3(2, 2, 3);
+        }
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
