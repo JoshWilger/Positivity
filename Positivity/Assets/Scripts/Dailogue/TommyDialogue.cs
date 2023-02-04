@@ -57,6 +57,7 @@ public class TommyDialogue : MonoBehaviour
             else
             {
                 theImg.enabled = true;
+                anim.SetTrigger("better");
                 NPCText.text = "My toy dog! You found him! Thank you!!!";
             }
         }

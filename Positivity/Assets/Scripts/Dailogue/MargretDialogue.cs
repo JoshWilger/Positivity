@@ -15,9 +15,11 @@ public class MargretDialogue : MonoBehaviour
 
     [SerializeField] private MissionClass mission;
     [SerializeField] private ItemStick stickScript;
+    [SerializeField] private Animator anim;
 
-    bool holdingDog = false;
-
+    bool interact = false;
+    int spacesPressed = 0;
+    int secondsPassed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +27,45 @@ public class MargretDialogue : MonoBehaviour
         theImg.enabled = false;
         NPCText.text = "";
         pressSpace.text = "";
+
+        if (stickScript.completed == true)
+        {
+            anim.SetTrigger("better");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        if (interact)
+        {
+            switch (spacesPressed)
+            {
+                case 0:
+                    NPCText.text = "My flowers can't grow! They haven't been watered in many days...";
+                    pressSpace.text = "Press Space...";
+                    break;
+                case 1:
+                    NPCText.text = "I'm too old to be moving around this much, so I can't water the flowers.";
+                    pressSpace.text = "Press Space...";
+                    break;
+                case 2:
+                    NPCText.text = "My husband used to water the flowers, but he passed away a few months ago...";
+                    pressSpace.text = "";
+                    break;
+            }
+            if (Input.GetButton("Jump"))
+            {
+                if(secondsPassed == 1)
+                {
+                    spacesPressed++;
+                }
+                else if(secondsPassed == 60)
+                {
+                    secondsPassed = 0;
+                }
+                secondsPassed++;
+            }
+        }
     }
 
     void Deactivate()
@@ -47,18 +82,22 @@ public class MargretDialogue : MonoBehaviour
             if (stickScript.completed == false)
             {
                 theImg.enabled = true;
-                NPCText.text = "I lost my favorite toy dog! How will I ever be happy again!";
+                int pressedSpace = 0;
+                interact = true;
             }
             else
             {
                 theImg.enabled = true;
-                NPCText.text = "My toy dog! You found him! Thank you!!!";
+                NPCText.text = "My flowers! They have bloomed! Thank you!";
+                anim.SetTrigger("better");
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collission)
     {
+        interact = false;
+        spacesPressed = 0;
         Deactivate();
     }
 }
