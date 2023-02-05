@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetButton("Jump"))
         {
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y + jumpAmount);
+            rb.velocity = new Vector2(dirX * moveSpeed, jumpAmount);
             JumpSound.Play();
-        }
+        }        
     }
 }
