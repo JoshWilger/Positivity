@@ -235,6 +235,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1791178008}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: inHouse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: itemName
+      value: Watering Can
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: characterName
+      value: Margret
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: otherCharacter
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4948446549670148510, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
       propertyPath: m_Name
       value: Watering Can
@@ -1342,6 +1358,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1791178008}
     - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
+      propertyPath: inHouse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
+      propertyPath: itemName
+      value: Bouquet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
       propertyPath: emptySound
       value: 
       objectReference: {fileID: 864448302}
@@ -1349,6 +1373,10 @@ PrefabInstance:
       propertyPath: pickUpSound
       value: 
       objectReference: {fileID: 933796631}
+    - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
+      propertyPath: characterName
+      value: Margret
+      objectReference: {fileID: 0}
     - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
       propertyPath: objectives.Array.size
       value: 1

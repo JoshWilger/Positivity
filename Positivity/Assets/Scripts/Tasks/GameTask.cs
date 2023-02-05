@@ -21,6 +21,7 @@ public class GameTask : MonoBehaviour
             return;
         }
         _IsComplete = true;
+        GamePersistTasks.CheckComplete();
 
     }
 
@@ -58,6 +59,23 @@ public class GameTask : MonoBehaviour
             return null;
         }        
         return step;
+    }
+
+
+    public bool StepsForItemComplete(string item)
+    {
+        foreach (var step in Steps.Values)
+        {
+            if (step.Item1.ToUpper() == item.ToUpper() || step.Item2.ToUpper() == item.ToUpper())
+            {
+                if (step.IsComplete == false)
+                {
+                    return false;
+                }
+            }
+            
+        }
+        return true;
     }
 
 }

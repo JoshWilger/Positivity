@@ -15,7 +15,7 @@ public class GamePersistTasks : MonoBehaviour
         var margretTask = new GameTask("Margret");
         var margretStep1 = new GameStep(margretTask, "Fill Can", "Watering Can", "Pond");
         var margretStep2 = new GameStep(margretTask, "Water Flower", "Watering Can", "Flower");
-        var margretStep3 = new GameStep(margretTask, "Give Flower", "Flower", "Margret");
+        var margretStep3 = new GameStep(margretTask, "Give Flower", "Bouquet", "Margret");
         margretTask.Steps.Add(margretStep1.Name, margretStep1);
         margretTask.Steps.Add(margretStep2.Name, margretStep2);
         margretTask.Steps.Add(margretStep3.Name, margretStep3);
@@ -49,6 +49,7 @@ public class GamePersistTasks : MonoBehaviour
         {
             return false;
         }
+        Debug.Log("All Tasks are Complete!!!!!");
         //SceneManager.LoadScene("Ending");
         return true;
     }

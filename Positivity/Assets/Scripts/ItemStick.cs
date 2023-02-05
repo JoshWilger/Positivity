@@ -43,10 +43,17 @@ public class ItemStick : MonoBehaviour
             //Can't attach if I don't know the other character
             if (otherCharacter == null)
             {
+                if (GamePersistTasks.Tasks[characterName].StepsForItemComplete(itemName))
+                {
+                    //Must be outside?
+                    Debug.Log($"Remove {itemName}");
+                    gameObject.SetActive(false);
+                    Destroy(this);
+                }
                 return;
             }
             //Attach Object to character if complete
-            if (GamePersistTasks.Tasks[characterName].GetStep(itemName)?.IsComplete ?? false)
+            if (GamePersistTasks.Tasks[characterName].StepsForItemComplete(itemName))
             {
                 transform.position = otherCharacter.transform.position + new Vector3(-1f, 0f);
             }
@@ -54,7 +61,7 @@ public class ItemStick : MonoBehaviour
         else
         {
             //Destroy Object if complete
-            if (GamePersistTasks.Tasks[characterName].GetStep(itemName)?.IsComplete ?? false)
+            if (GamePersistTasks.Tasks[characterName].StepsForItemComplete(itemName))
             {
                 Debug.Log($"Remove {itemName}");
                 gameObject.SetActive(false);
