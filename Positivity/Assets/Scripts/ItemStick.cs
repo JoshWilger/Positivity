@@ -9,6 +9,12 @@ public class ItemStick : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] objectives;
 
+    //If I am Carly 
+    [SerializeField] private GameObject otherCharacter; //BEN
+    public string characterName = ""; //BEN
+    public string itemName = ""; //Carly
+    public bool inHouse = false; //True
+
     private Vector3 offset = new Vector3();
     private GameObject collidedObject = null;
     private GameObject theOtherObject = null;
@@ -24,6 +30,34 @@ public class ItemStick : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (string.IsNullOrEmpty(characterName))
+        {
+            return;
+        }
+        if (string.IsNullOrEmpty(itemName))
+        {
+            return;
+        }
+        if (otherCharacter == null)
+        {
+            return;
+        }
+        if (inHouse)
+        {
+            //Attach Object to character if complete
+            if (GamePersistTasks.Tasks[characterName].GetStep("Carly")?.IsComplete ?? false)
+            {
+                transform.position = otherCharacter.transform.position + new Vector3(-1f, 0f);
+            }
+        }
+        else
+        {
+            //Destroy Object if complete
+            if (GamePersistTasks.Tasks[characterName].GetStep("Carly")?.IsComplete ?? false)
+            {
+                Destroy(this);
+            }
+        }
     }
 
     // Update is called once per frame

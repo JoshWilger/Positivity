@@ -343,6 +343,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: inHouse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: itemName
+      value: Carly
+      objectReference: {fileID: 0}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: characterName
+      value: Ben
+      objectReference: {fileID: 0}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: otherCharacter
+      value: 
+      objectReference: {fileID: 900139531}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
       propertyPath: objectives.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1343,7 +1359,7 @@ MonoBehaviour:
   thePlayer: {fileID: 842298075}
   anim: {fileID: 900139534}
   anim2: {fileID: 1994308994}
-  carlyScript: {fileID: 1803786792}
+  carlyScript: {fileID: 0}
   stickyScript: {fileID: 1994308990}
 --- !u!114 &1803786786
 MonoBehaviour:
@@ -1361,25 +1377,6 @@ MonoBehaviour:
   wateringCan: {fileID: 0}
   tommysToy: {fileID: 0}
   character: {fileID: 1994308989}
---- !u!114 &1803786792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842298075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 767c27f8f4f9e564389ce5fe38da1eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCText: {fileID: 1382048250}
-  theImg: {fileID: 1595594470}
-  pressSpace: {fileID: 1648628483}
-  theNPC: {fileID: 1994308989}
-  thePlayer: {fileID: 842298075}
-  anim: {fileID: 1994308994}
-  completed: 0
 --- !u!1 &1994308989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5236167863556236901, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}

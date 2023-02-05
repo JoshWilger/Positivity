@@ -48,5 +48,16 @@ public class GameTask : MonoBehaviour
         }
         return step;
     }
-    
+
+    public GameStep GetStep(string item)
+    {
+        
+        var step = Steps.Values.FirstOrDefault(s => s.Item1.ToUpper() == item.ToUpper() || s.Item2.ToUpper() == item.ToUpper());
+        if (step is null)
+        {            
+            return null;
+        }        
+        return step;
+    }
+
 }

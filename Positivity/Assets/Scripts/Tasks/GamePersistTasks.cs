@@ -11,7 +11,6 @@ public class GamePersistTasks : MonoBehaviour
 
     public static void NewGame()
     {
-        Debug.Log("here!");
         Tasks.Clear();
         var margretTask = new GameTask("Margret");
         var margretStep1 = new GameStep(margretTask, "Fill Can", "Watering Can", "Pond");
@@ -44,12 +43,13 @@ public class GamePersistTasks : MonoBehaviour
 
     }
 
-    public static void CheckComplete()
+    public static bool CheckComplete()
     {
         if (Tasks.Values.All(s => s.IsComplete) == false)
         {
-            return;
+            return false;
         }
-        SceneManager.LoadScene("Ending");
+        //SceneManager.LoadScene("Ending");
+        return true;
     }
 }

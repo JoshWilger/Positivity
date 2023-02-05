@@ -34,7 +34,7 @@ public class BenDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        if (completed)
+        if (GamePersistTasks.Tasks["Ben"].GetCurrentStep()?.IsComplete ?? true)
         {
             //Set Ben to better
             anim.SetTrigger("better");
@@ -89,6 +89,12 @@ public class BenDialogue : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collission)
     {
         Debug.Log(collission.name);
+        if (GamePersistTasks.Tasks["Ben"].IsComplete)
+        {
+            theImg.enabled = true;
+            NPCText.text = "True love at last! Thank you!";
+            return;
+        }
         if (collission.gameObject == theNPC)
         {
             if (!stickyScript.completed)
@@ -104,7 +110,7 @@ public class BenDialogue : MonoBehaviour
                 anim.SetTrigger("better");
                 anim2.SetTrigger("better");
                 heart.SetActive(true);
-                carlyScript.completed = true;
+                GamePersistTasks.Tasks["Ben"].GetCurrentStep()?.Complete();
             }
         }
     }
