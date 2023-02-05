@@ -1236,7 +1236,8 @@ MonoBehaviour:
   character: {fileID: 0}
   thePlayer: {fileID: 842298075}
   anim: {fileID: 900139534}
-  carlyScript: {fileID: 0}
+  anim2: {fileID: 1994308994}
+  carlyScript: {fileID: 1803786792}
   stickyScript: {fileID: 1994308990}
 --- !u!114 &1803786786
 MonoBehaviour:
