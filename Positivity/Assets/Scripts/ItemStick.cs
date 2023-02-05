@@ -42,7 +42,7 @@ public class ItemStick : MonoBehaviour
         {
             return;
         }
-        if (collision.gameObject == player && !completed)
+        if (collision.gameObject.name == player.name && !completed)
         {
             if(pickedUp == false)
             {
