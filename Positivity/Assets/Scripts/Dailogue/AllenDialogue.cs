@@ -27,8 +27,10 @@ public class AllenDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        if (SoccerBallKick.completed)
+        Debug.Log(GamePersistTasks.Tasks["Allen"].GetCurrentStep());
+        if (GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true)
         {
+            Debug.Log("on start");
             anim.SetTrigger("better");
         }
     }
@@ -66,7 +68,7 @@ public class AllenDialogue : MonoBehaviour
                 secondsPassed++;
             }
         }
-        if (SoccerBallKick.completed)
+        if (GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true)
         {
             anim.SetTrigger("better");
         }
@@ -83,7 +85,7 @@ public class AllenDialogue : MonoBehaviour
     {
         if (collission.gameObject == theNPC)
         {
-            if (SoccerBallKick.completed == false)
+            if (!GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true)
             {
                 theImg.enabled = true;
                 interact = true;

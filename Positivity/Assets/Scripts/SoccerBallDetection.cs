@@ -31,6 +31,7 @@ public class SoccerBallDetection : MonoBehaviour
         {
             case "SoccerBall":
                 SoccerBallKick.KickBall(playerPosition);
+                GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.Complete();
                 break;
         }
 

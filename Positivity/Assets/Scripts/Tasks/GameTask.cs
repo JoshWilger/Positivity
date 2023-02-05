@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameTask : MonoBehaviour
 {
-    public GameTask(string Name)
+    public GameTask(string name)
     {
         _Name = name;
     }
@@ -28,12 +28,22 @@ public class GameTask : MonoBehaviour
     {
         if (IsComplete)
         {
+            Debug.Log("task is complete");
+
             return null;
         }
 
-        var step = Steps.Values.First(s => s.IsComplete == false);
-        if (step.Item1.ToUpper() != item.ToUpper() && step.Item2.ToUpper() != item.ToUpper())
+        var step = Steps.Values.FirstOrDefault(s => s.IsComplete == false);
+        if (step == null)
         {
+            Debug.Log("all complete");
+
+            return null;
+        }
+        if (step.Item1.ToUpper() != item.ToUpper() && step.Item2.ToUpper() != item.ToUpper() && item != "")
+        {
+            Debug.Log("doesnt fetch step");
+
             return null;
         }
         return step;
