@@ -45,9 +45,13 @@ public class GamePersistTasks : MonoBehaviour
 
     public static bool CheckComplete()
     {
-        if (Tasks.Values.All(s => s.IsComplete) == false)
+        foreach (var task in Tasks.Values)
         {
-            return false;
+            if (task.CheckComplete())
+            {
+                Debug.Log($"Task not complete {task.Name}");
+                return false;
+            }
         }
         Debug.Log("All Tasks are Complete!!!!!");
         //SceneManager.LoadScene("Ending");

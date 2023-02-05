@@ -27,7 +27,6 @@ public class AllenDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        Debug.Log(GamePersistTasks.Tasks["Allen"].GetCurrentStep());
         if (GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true)
         {
             Debug.Log("on start");

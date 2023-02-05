@@ -25,6 +25,7 @@ public class GameStep : MonoBehaviour
     {
         Debug.Log($"Complete Step {Name} {Item1} {Item2}");
         _IsComplete = true;
-        ParentTask.CheckComplete();
+        GamePersistTasks.CheckComplete();
+
     }
 }

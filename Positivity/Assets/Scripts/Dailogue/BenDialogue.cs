@@ -92,7 +92,7 @@ public class BenDialogue : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collission)
     {
         Debug.Log(collission.name);
-        if (GamePersistTasks.Tasks["Ben"].IsComplete)
+        if (GamePersistTasks.Tasks["Ben"].CheckComplete())
         {
             theImg.enabled = true;
             NPCText.text = "True love at last! Thank you!";

@@ -30,7 +30,11 @@ public class GoBackToMainScene : MonoBehaviour
         {
             return;
         }
-
+        if (GamePersistTasks.CheckComplete())
+        {
+            SceneManager.LoadScene("Ending");
+            return;
+        }
         SceneManager.LoadScene("MainScene");
     }
 }

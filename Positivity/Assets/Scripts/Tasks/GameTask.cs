@@ -11,40 +11,37 @@ public class GameTask : MonoBehaviour
     private string _Name;
     public string Name { get { return _Name; } }
     public Dictionary<string, GameStep> Steps { get; set; } = new Dictionary<string, GameStep>(System.StringComparer.InvariantCultureIgnoreCase);
-    private bool _IsComplete;
-    public bool IsComplete { get { return _IsComplete; } }
 
-    public void CheckComplete()
+    public bool CheckComplete()
     {
-        if (Steps.Values.All(s => s.IsComplete) == false)
+
+        foreach (var step in Steps.Values)
         {
-            return;
+            if (step.IsComplete == false)
+            {
+                Debug.Log($" Task {Name} Step {Name} is not complete");           
+                return false;
+            }
         }
-        _IsComplete = true;
-        GamePersistTasks.CheckComplete();
+        
+        return true;
 
     }
 
     public GameStep GetCurrentStep(string item = "")
     {
-        if (IsComplete)
+        if (CheckComplete())
         {
-            Debug.Log("task is complete");
-
             return null;
         }
 
         var step = Steps.Values.FirstOrDefault(s => s.IsComplete == false);
         if (step is null)
         {
-            Debug.Log("all complete");
-
             return null;
         }
         if (step.Item1.ToUpper() != item.ToUpper() && step.Item2.ToUpper() != item.ToUpper() && item != "")
         {
-            Debug.Log("doesnt fetch step");
-
             return null;
         }
         return step;
