@@ -17,6 +17,8 @@ public class StartScreen : MonoBehaviour
     public void PlayButton_Clicked()
     {
         animator.SetTrigger("FadeOut");
+        GamePersistTasks.NewGame();
+        PlayerCarriedItems.carriedItems = new string[] { };
     }
     public void OnFadeComplete()
     {
