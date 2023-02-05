@@ -10,10 +10,12 @@ public class BenDialogue : MonoBehaviour
     [SerializeField] private Image theImg;
     [SerializeField] private TMP_Text pressSpace;
     [SerializeField] private GameObject theNPC;
+    [SerializeField] private GameObject character;
     [SerializeField] private GameObject thePlayer;
 
     [SerializeField] private Animator anim;
-    [SerializeField] private ItemStick stickyScript;
+    [SerializeField] private CarlyDialogue carlyScript;
+    public ItemStick stickyScript;
 
     bool completed = false;
     bool interact = false;
@@ -81,6 +83,7 @@ public class BenDialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collission)
     {
+        Debug.Log(collission.name);
         if (collission.gameObject == theNPC)
         {
             //If the mission isn't completed yet
@@ -95,6 +98,7 @@ public class BenDialogue : MonoBehaviour
                 theImg.enabled = true;
                 NPCText.text = "True love at last! Thank you!";
                 anim.SetTrigger("better");
+                carlyScript.completed = true;
             }
         }
     }

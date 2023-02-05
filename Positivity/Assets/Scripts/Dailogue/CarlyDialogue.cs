@@ -15,7 +15,7 @@ public class CarlyDialogue : MonoBehaviour
     [SerializeField] private MissionClass mission;
     [SerializeField] private Animator anim;
 
-    bool completed = false;
+    public bool completed = false;
     bool interact = false;
     int spacesPressed = 0;
     int secondsPassed = 1;

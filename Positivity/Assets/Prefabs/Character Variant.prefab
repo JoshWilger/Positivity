@@ -357,6 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5344177011071760314, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
+  objectives:
+  - {fileID: 0}
   mission: {fileID: 11400000, guid: 20cf4dc7f9756fd4785c8dae03c7b905, type: 2}
   completed: 0
   pickUpSound: {fileID: 8887510559768982650}
