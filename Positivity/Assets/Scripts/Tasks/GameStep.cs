@@ -19,10 +19,11 @@ public class GameStep : MonoBehaviour
     public string Item1 { get { return _Item1; } }
     private string _Item2;
     public string Item2 { get { return _Item2; } }    
-    private bool _IsComplete;
+    private bool _IsComplete = false;
     public bool IsComplete { get { return _IsComplete; } }
     public void Complete()
     {
+        Debug.Log($"Complete Step {Name} {Item1} {Item2}");
         _IsComplete = true;
     }
 }

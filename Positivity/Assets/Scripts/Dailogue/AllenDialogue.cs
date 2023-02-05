@@ -85,7 +85,7 @@ public class AllenDialogue : MonoBehaviour
     {
         if (collission.gameObject == theNPC)
         {
-            if (!GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true)
+            if (!(GamePersistTasks.Tasks["Allen"].GetCurrentStep()?.IsComplete ?? true))
             {
                 theImg.enabled = true;
                 interact = true;

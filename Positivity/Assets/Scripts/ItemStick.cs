@@ -9,7 +9,7 @@ public class ItemStick : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] objectives;
 
-    private Vector3 offset = new();
+    private Vector3 offset = new Vector3();
     private GameObject collidedObject = null;
     private GameObject theOtherObject = null;
     private Rigidbody2D rb;
