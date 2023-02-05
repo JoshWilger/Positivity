@@ -1329,7 +1329,7 @@ MonoBehaviour:
   pressSpace: {fileID: 1161413407}
   theNPC: {fileID: 181770181}
   thePlayer: {fileID: 842298075}
-  mission: {fileID: 11400000, guid: 7f1fb435126520f46802093707c867e4, type: 2}
+  tommysToy: {fileID: 1468205491}
   stickScript: {fileID: 9503478}
   anim: {fileID: 181770182}
 --- !u!114 &1803786785
@@ -1364,6 +1364,7 @@ MonoBehaviour:
   wateringCan: {fileID: 0}
   tommysToy: {fileID: 1468205491}
   character: {fileID: 0}
+  bouquet: {fileID: 0}
 --- !u!1001 &2121574317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1376,6 +1377,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842298075}
     - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
+      propertyPath: inHouse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
+      propertyPath: itemName
+      value: Tommy's Toy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
       propertyPath: emptySound
       value: 
       objectReference: {fileID: 548736435}
@@ -1383,6 +1392,14 @@ PrefabInstance:
       propertyPath: pickUpSound
       value: 
       objectReference: {fileID: 548736435}
+    - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
+      propertyPath: characterName
+      value: Tommy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
+      propertyPath: otherCharacter
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8582085312225270075, guid: c04b77ae409b5ca4db0cbc3bf0968f9f, type: 3}
       propertyPath: objectives.Array.size
       value: 1

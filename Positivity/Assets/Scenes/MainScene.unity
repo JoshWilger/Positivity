@@ -1635,7 +1635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1264829755
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1800,8 +1800,8 @@ MonoBehaviour:
   player: {fileID: 1013978140}
   objectives: []
   otherCharacter: {fileID: 0}
-  characterName: 
-  itemName: 
+  characterName: Tommy
+  itemName: Tommy's Toy
   inHouse: 0
   completed: 0
   pickUpSound: {fileID: 798865395}
