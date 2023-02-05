@@ -82,6 +82,7 @@ public class MargretDialogue : MonoBehaviour
             if (stickScript.completed == false)
             {
                 theImg.enabled = true;
+                int pressedSpace = 0;
                 interact = true;
             }
             else

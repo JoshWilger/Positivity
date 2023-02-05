@@ -13,12 +13,10 @@ public class CarlyDialogue : MonoBehaviour
     [SerializeField] private GameObject thePlayer;
 
     [SerializeField] private MissionClass mission;
-    [SerializeField] private Animator anim;
+    [SerializeField] private ItemStick stickScript;
 
-    bool completed = false;
-    bool interact = false;
-    int spacesPressed = 0;
-    int secondsPassed = 1;
+    bool holdingDog = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,46 +24,12 @@ public class CarlyDialogue : MonoBehaviour
         theImg.enabled = false;
         NPCText.text = "";
         pressSpace.text = "";
-
-        if (completed)
-        {
-            anim.SetTrigger("better");
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (interact)
-        {
-            switch (spacesPressed)
-            {
-                case 0:
-                    NPCText.text = "Oh em gee, like, everyone and everything is so gross, like I can't even right now.";
-                    pressSpace.text = "Press Space...";
-                    break;
-                case 1:
-                    NPCText.text = "I was on twitter the other day, and, like, I saw this guy who was so gross, like ew. ";
-                    pressSpace.text = "Press Space...";
-                    break;
-                case 2:
-                    NPCText.text = "I wish I had a boyfriend who wasn't as gross as some of these randos online...";
-                    pressSpace.text = "";
-                    break;
-            }
-            if (Input.GetButton("Jump"))
-            {
-                if (secondsPassed == 1)
-                {
-                    spacesPressed++;
-                }
-                else if (secondsPassed == 60)
-                {
-                    secondsPassed = 0;
-                }
-                secondsPassed++;
-            }
-        }
+
     }
 
     void Deactivate()
@@ -79,24 +43,21 @@ public class CarlyDialogue : MonoBehaviour
     {
         if (collission.gameObject == theNPC)
         {
-            if (!completed)
+            if (stickScript.completed == false)
             {
                 theImg.enabled = true;
-                interact = true;
+                NPCText.text = "I lost my favorite toy dog! How will I ever be happy again!";
             }
             else
             {
                 theImg.enabled = true;
-                NPCText.text = "True love at last! Thank you!";
-                anim.SetTrigger("better");
+                NPCText.text = "My toy dog! You found him! Thank you!!!";
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collission)
     {
-        interact = false;
-        spacesPressed = 0;
         Deactivate();
     }
 }
