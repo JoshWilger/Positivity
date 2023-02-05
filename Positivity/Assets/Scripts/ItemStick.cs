@@ -117,6 +117,7 @@ public class ItemStick : MonoBehaviour
         {
             if (collision.gameObject == objectives[currentIndex])
             {
+                Debug.Log($"collision.gameObject == objectives[currentIndex] {collision.gameObject.name}");
                 currentIndex++;
                 completed = currentIndex == objectives.Length;
                 Debug.Log(completed);

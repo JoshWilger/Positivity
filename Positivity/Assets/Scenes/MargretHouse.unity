@@ -1378,6 +1378,10 @@ PrefabInstance:
       value: Margret
       objectReference: {fileID: 0}
     - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
+      propertyPath: otherCharacter
+      value: 
+      objectReference: {fileID: 717060041}
+    - target: {fileID: 5029152654111453083, guid: d9027d0930df2694bae229016409834f, type: 3}
       propertyPath: objectives.Array.size
       value: 1
       objectReference: {fileID: 0}
