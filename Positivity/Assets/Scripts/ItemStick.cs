@@ -135,6 +135,7 @@ public class ItemStick : MonoBehaviour
                 emptySound.Play();
             }
             GetComponent<PolygonCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             theOtherObject = collision.gameObject;
             offset = transform.position - theOtherObject.transform.position;
         }

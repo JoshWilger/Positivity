@@ -24,6 +24,7 @@ public class StartScreen : MonoBehaviour
 
         music.enabled = true;
     }
+
     public void OnFadeComplete()
     {
         SceneManager.LoadScene("MainScene");

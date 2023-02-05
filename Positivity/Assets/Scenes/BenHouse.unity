@@ -960,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367177104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.53, y: 0.44, z: -0.4570774}
+  m_LocalPosition: {x: 2.98, y: 0.48, z: -0.4570774}
   m_LocalScale: {x: 2.09, y: 2.09, z: 2.09}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1355,11 +1355,9 @@ MonoBehaviour:
   pressSpace: {fileID: 1648628483}
   theNPC: {fileID: 900139531}
   theNPC2: {fileID: 1994308989}
-  character: {fileID: 0}
   thePlayer: {fileID: 842298075}
   anim: {fileID: 900139534}
   anim2: {fileID: 1994308994}
-  carlyScript: {fileID: 0}
   stickyScript: {fileID: 1994308990}
 --- !u!114 &1803786786
 MonoBehaviour:
@@ -1377,6 +1375,7 @@ MonoBehaviour:
   wateringCan: {fileID: 0}
   tommysToy: {fileID: 0}
   character: {fileID: 1994308989}
+  bouquet: {fileID: 0}
 --- !u!1 &1994308989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5236167863556236901, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
