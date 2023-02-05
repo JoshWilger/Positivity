@@ -12,15 +12,14 @@ public class BenDialogue : MonoBehaviour
     [SerializeField] private TMP_Text pressSpace;
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject theNPC2;
-    [SerializeField] private GameObject character;
     [SerializeField] private GameObject thePlayer;
 
     [SerializeField] private Animator anim;
     [SerializeField] private Animator anim2;
-    [SerializeField] private CarlyDialogue carlyScript;
     public ItemStick stickyScript;
 
-    bool completed = false;
+    private Rigidbody2D rb;
+
     bool interact = false;
     int spacesPressed = 0;
     int secondsPassed = 1;
@@ -66,6 +65,10 @@ public class BenDialogue : MonoBehaviour
             }
             if (Input.GetButton("Jump"))
             {
+                if (GamePersistTasks.Tasks["Ben"].GetCurrentStep()?.IsComplete ?? true)
+                {
+                    return;
+                }
                 if (secondsPassed == 1)
                 {
                     spacesPressed++;
@@ -105,6 +108,8 @@ public class BenDialogue : MonoBehaviour
             }
             else
             {
+                rb = theNPC2.GetComponent<Rigidbody2D>();
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
                 theImg.enabled = true;
                 NPCText.text = "True love at last! Thank you!";
                 anim.SetTrigger("better");
