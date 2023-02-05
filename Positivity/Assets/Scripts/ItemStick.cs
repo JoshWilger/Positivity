@@ -53,7 +53,7 @@ public class ItemStick : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
             offset = transform.position - theOtherObject.transform.position;
         }
-        if (collision.gameObject.name == mission.objectives[currentIndex].name)
+        if (collision.gameObject == mission.objectives[currentIndex])
         {
             currentIndex++;
             completed = currentIndex == mission.objectives.Length;
