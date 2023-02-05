@@ -55,7 +55,7 @@ public class ItemStick : MonoBehaviour
             //Attach Object to character if complete
             if (GamePersistTasks.Tasks[characterName].StepsForItemComplete(itemName))
             {
-                transform.position = otherCharacter.transform.position + new Vector3(-1f, 0f);
+                transform.position = otherCharacter.transform.position + new Vector3(-2f, 0f);
             }
         }
         else
@@ -134,8 +134,7 @@ public class ItemStick : MonoBehaviour
                 completedSound = true;
                 emptySound.Play();
             }
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            GetComponent<PolygonCollider2D>().enabled = false;
             theOtherObject = collision.gameObject;
             offset = transform.position - theOtherObject.transform.position;
         }
