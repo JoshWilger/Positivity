@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemStick : MonoBehaviour
@@ -67,6 +69,30 @@ public class ItemStick : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Dynamic;
             theOtherObject = collision.gameObject;
             offset = transform.position - theOtherObject.transform.position;
+        }
+        else
+        {
+            //Save Item to be carried
+            //Make sure I am not already carrying it.
+            if (pickedUp == false)
+            {
+                return;
+            }
+            Debug.Log("Before Check");
+            bool exists = false;
+            try
+            {
+                exists = (PlayerCarriedItems.carriedItems?.Any(i => i == gameObject.name) ?? false);
+            }
+            catch { }
+            if (exists == false)
+            {
+                Debug.Log("Before Resize");
+                System.Array.Resize(ref PlayerCarriedItems.carriedItems, PlayerCarriedItems.carriedItems.Length + 1);
+                Debug.Log("Before Assigning");
+                PlayerCarriedItems.carriedItems[PlayerCarriedItems.carriedItems.Length - 1] = (gameObject.name);
+                Debug.Log($"Picked up {gameObject.name}");
+            }
         }
     }
 }
