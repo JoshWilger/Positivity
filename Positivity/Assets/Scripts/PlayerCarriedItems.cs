@@ -10,6 +10,7 @@ public class PlayerCarriedItems : MonoBehaviour
     public GameObject wateringCan;
     public GameObject tommysToy;
     public GameObject character;
+    public GameObject bouquet;
     public static string[] carriedItems = { };
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,15 @@ public class PlayerCarriedItems : MonoBehaviour
                         character.gameObject.SetActive(true);
                         character.transform.localPosition = Vector3.zero;
                         character.transform.position = player.transform.position + new Vector3(0f, 3f, 0f);
+                    }
+                }
+                if (carriedItems[i] == "Bouquet")
+                {
+                    if (bouquet != null)
+                    {
+                        bouquet.gameObject.SetActive(true);
+                        bouquet.transform.localPosition = Vector3.zero;
+                        bouquet.transform.position = player.transform.position + new Vector3(1f, 0f, 0f);
                     }
                 }
             }
