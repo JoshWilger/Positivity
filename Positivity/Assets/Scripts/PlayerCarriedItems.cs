@@ -25,7 +25,7 @@ public class PlayerCarriedItems : MonoBehaviour
                     {
                         wateringCan.gameObject.SetActive(true);
                         wateringCan.transform.localPosition = Vector3.zero;
-                        wateringCan.transform.position = player.transform.position + new Vector3(-0.6f, 0f, 0f);
+                        wateringCan.transform.position = player.transform.position + new Vector3(-0.61f, 0f, 0f);
                     }
                 } 
             }
