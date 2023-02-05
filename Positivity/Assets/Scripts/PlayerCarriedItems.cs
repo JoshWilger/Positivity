@@ -8,6 +8,7 @@ public class PlayerCarriedItems : MonoBehaviour
 {
     public GameObject player;
     public GameObject wateringCan;
+    public GameObject tommysToy;
     public GameObject character;
     public static string[] carriedItems = { };
     // Start is called before the first frame update
@@ -26,8 +27,21 @@ public class PlayerCarriedItems : MonoBehaviour
                     {
                         wateringCan.gameObject.SetActive(true);
                         wateringCan.transform.localPosition = Vector3.zero;
-                        wateringCan.transform.position = player.transform.position + new Vector3(-0.6f, 0f, 0f);
+                        wateringCan.transform.position = player.transform.position + new Vector3(1f, 0f, 0f);
                     }
+                }
+
+                if (carriedItems[i] == "Tommy's Toy")
+                {
+                    if (tommysToy != null)
+                    {
+                        tommysToy.gameObject.SetActive(true);
+                        tommysToy.transform.localPosition = Vector3.zero;
+                        tommysToy.transform.position = player.transform.position + new Vector3(1f, 0f, 0f);
+                    }
+                }
+            }
+
                 }
                 else if (carriedItems[i] == "Character" || carriedItems[i] == "Character Variant")
                 {
