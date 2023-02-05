@@ -180,6 +180,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 034486d5bc22efa42bba9d690199d482, type: 3}
+--- !u!1001 &279081041
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148498, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1791178008}
+    - target: {fileID: 4948446549670148510, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: m_Name
+      value: Watering Can
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
 --- !u!1 &304983100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,72 +1088,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315914060}
   m_CullTransparentMesh: 1
---- !u!1001 &1480341218
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2741070271622943409, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1791178008}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943414, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741070271622943418, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-      propertyPath: m_Name
-      value: Watering Can
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
---- !u!1 &1480341219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2741070271622943418, guid: 534aa20fc5c6d784f93e268e2a5aa24f, type: 3}
-  m_PrefabInstance: {fileID: 1480341218}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534099846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,4 +1225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1791178008}
-  wateringCan: {fileID: 1480341219}
+  wateringCan: {fileID: 0}
+  tommysToy: {fileID: 0}
+  character: {fileID: 0}

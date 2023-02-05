@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Mission", menuName = "Mission Class")]
 public class MissionClass : ScriptableObject
 {
-    public GameObject[] objectives;
+    public bool completed = false;
 }

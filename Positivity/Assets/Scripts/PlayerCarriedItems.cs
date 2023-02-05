@@ -14,13 +14,11 @@ public class PlayerCarriedItems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("PlayerCarriedItems Start");
         if ((carriedItems?.Length ?? 0) > 0)
         {
-            Debug.Log($"carriedItems.Length {carriedItems.Length}");
             for (int i = 0; i < carriedItems.Length; i++)
             {
-                Debug.Log(carriedItems[i]);
+                Debug.Log($"Carried item: {carriedItems[i] }");
                 if (carriedItems[i] == "Watering Can")
                 {
                     if (wateringCan != null)

@@ -12,9 +12,8 @@ public class BenDialogue : MonoBehaviour
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject thePlayer;
 
-    [SerializeField] private MissionClass mission;
     [SerializeField] private Animator anim;
-    [SerializeField] private ItemStick test;
+    [SerializeField] private ItemStick stickyScript;
 
     bool completed = false;
     bool interact = false;
@@ -85,7 +84,7 @@ public class BenDialogue : MonoBehaviour
         if (collission.gameObject == theNPC)
         {
             //If the mission isn't completed yet
-            if (!completed)
+            if (!stickyScript.completed)
             {
                 //Show text box
                 theImg.enabled = true;
