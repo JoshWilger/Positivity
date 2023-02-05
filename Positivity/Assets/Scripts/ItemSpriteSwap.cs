@@ -25,6 +25,11 @@ public class ItemSpriteSwap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var step = GamePersistTasks.Tasks["Margret"].GetCurrentStep("Pond");
+        if (step?.Name == "Fill Can")
+        {
+            step.Complete();
+        }
         if (collision.gameObject == objective)
         {
             fillSound.Play();

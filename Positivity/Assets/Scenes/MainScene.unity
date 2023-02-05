@@ -2660,6 +2660,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1013978140}
     - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: itemName
+      value: Watering Can
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
+      propertyPath: characterName
+      value: Margret
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948446549670148501, guid: a4c3e0bdc4439754991e2ce298106a4d, type: 3}
       propertyPath: objectives.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2826,6 +2834,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6589738634468692886, guid: f94c8664c10d07a42a2fbda475fc11d2, type: 3}
+      propertyPath: stepName
+      value: Water Flower
+      objectReference: {fileID: 0}
     - target: {fileID: 6589738634468692886, guid: f94c8664c10d07a42a2fbda475fc11d2, type: 3}
       propertyPath: stickScript
       value: 
