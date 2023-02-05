@@ -24,8 +24,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -4663611383580649828}
-    m_Duration: 38.36666666666667
+    m_Asset: {fileID: -4326866306873995309}
+    m_Duration: 86.35
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5308684304264008847}
     m_EaseInDuration: 0
@@ -89,14 +89,14 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: MainTitleTheme
+    m_DisplayName: Title_Music_New
   m_Markers:
     m_Objects: []
   m_TrackProperties:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
---- !u!114 &-4663611383580649828
+--- !u!114 &-4326866306873995309
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: ae232e39db7cbda46abf68fbe8e5e8f3, type: 3}
+  m_Clip: {fileID: 8300000, guid: 44d41a1327e2f4a40ba70817abcb59d3, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:

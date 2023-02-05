@@ -24,7 +24,7 @@ public class BenDialogue : MonoBehaviour
     int spacesPressed = 0;
     int secondsPassed = 1;
 
-
+    bool temp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +45,12 @@ public class BenDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GamePersistTasks.Tasks["Ben"].GetCurrentStep()?.IsComplete ?? true)
+        {
+            rb = theNPC2.GetComponent<Rigidbody2D>();
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            anim2.SetTrigger("better");
+        }
         //Show initial text box
         if (interact)
         {
