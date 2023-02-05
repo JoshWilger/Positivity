@@ -502,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 2282010716562308551, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8725f8b6d74afb346b63f79039807864, type: 2}
+      objectReference: {fileID: 9100000, guid: a832f7c45d95bfb4c94277f04adfadec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
 --- !u!1 &903116862
@@ -907,7 +907,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
