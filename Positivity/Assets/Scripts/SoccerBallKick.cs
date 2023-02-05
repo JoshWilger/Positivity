@@ -16,13 +16,6 @@ public class SoccerBallKick : MonoBehaviour
     private static Vector3 playerFacePosition;
     private static Vector3 diff;
     private const float kickSpeed = 4.0f;
-    public AudioSource Whirling;
-    public AudioSource Fling;
-    public AudioSource Hit;
-    private bool played = false;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +31,7 @@ public class SoccerBallKick : MonoBehaviour
         {
             return;
         }
-        if(!played)
-        {
-            Whirling.Play();
-            played = true;
-        }
+
         if (diff.x < 0)
         {
             ball.transform.Rotate(Vector3.forward, 1000f * Time.deltaTime);
@@ -54,21 +43,17 @@ public class SoccerBallKick : MonoBehaviour
         }
         if (hasHitFace == false)
         {
-           
             //make it go toward the face.
             var currentPlayerPosition = new Vector3(allen.transform.position.x, playerFacePosition.y, playerFacePosition.z);
             transform.position = Vector3.MoveTowards(transform.position, currentPlayerPosition, kickSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, currentPlayerPosition) < 0.01f)
             {
-                Whirling.Stop();
-                Fling.Play();
                 hasHitFace = true;
             }
             return;
         }
         if (house.GetComponent<Renderer>().bounds.Contains(ball.transform.position) == false)
         {
-            Hit.Play();
             completed = true;
             isKicked = false;
             //SceneManager.LoadScene("MainScene");
@@ -90,6 +75,5 @@ public class SoccerBallKick : MonoBehaviour
         
 
         playerFacePosition = allenStatic.transform.position + new Vector3(0.0f, 0.4f, 0.0f);
-        //Whirling.Play();
     }
 }
