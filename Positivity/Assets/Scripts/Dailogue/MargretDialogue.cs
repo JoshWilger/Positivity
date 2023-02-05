@@ -27,10 +27,25 @@ public class MargretDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        if (stickScript.completed == true)
+
+        var margTask = GamePersistTasks.Tasks["Margret"];
+        if (margTask is null)
         {
+            Debug.Log("Margret task is null?????");
+        }
+        var giveBouquetStep = margTask.GetStep("Bouquet");
+        if (giveBouquetStep is null)
+        {
+            Debug.Log("Marg Step is null");
+            return;
+        }
+        Debug.Log("Check if Bouquet was given");
+        if (giveBouquetStep.IsComplete)
+        {
+            Debug.Log("Bouqet was already given");
             anim.SetTrigger("better");
         }
+        
     }
 
     void Update()
@@ -88,6 +103,22 @@ public class MargretDialogue : MonoBehaviour
                 theImg.enabled = true;
                 NPCText.text = "My flowers! They have bloomed! Thank you!";
                 anim.SetTrigger("better");
+
+                var margTask = GamePersistTasks.Tasks["Margret"];
+                if (margTask is null)
+                {
+                    Debug.Log("Margret task is null?????");
+                }
+                var giveBouquetStep = margTask.GetStep("Bouquet");
+                if (giveBouquetStep is null)
+                {
+                    Debug.Log("Marg Step is null");
+                    return;
+                }
+                Debug.Log("Check if Bouquet was given");
+
+                giveBouquetStep.Complete();
+
             }
         }
     }
