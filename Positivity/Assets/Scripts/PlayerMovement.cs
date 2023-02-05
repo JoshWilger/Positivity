@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpAmount;
+    [SerializeField] private BoxCollider boxTrigger;
 
     private Rigidbody2D rb;
     private Collider2D coll;
@@ -43,12 +44,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(dirX * moveSpeed, jumpAmount);
             JumpSound.Play();
-        }        
+        }
     }
 }

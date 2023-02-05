@@ -37,7 +37,7 @@ public class GamePersistTasks : MonoBehaviour
 
 
         var tommyTask = new GameTask("Tommy");
-        var tommyStep1 = new GameStep(tommyTask, "Toy", "Tommys Toy", "Tommy");
+        var tommyStep1 = new GameStep(tommyTask, "Toy", "Tommy's Toy", "Tommy");
         tommyTask.Steps.Add(tommyStep1.Name, tommyStep1);
         Tasks.Add(tommyTask.Name, tommyTask);
 

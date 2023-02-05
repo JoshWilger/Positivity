@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class TommyDialogue : MonoBehaviour
     [SerializeField] private TMP_Text pressSpace;
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject thePlayer;
+    [SerializeField] private GameObject tommysToy;
 
     [SerializeField] private ItemStick stickScript;
     [SerializeField] private Animator anim;
@@ -25,9 +27,24 @@ public class TommyDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        if (stickScript.completed == true)
+        if (GamePersistTasks.Tasks["Tommy"].GetCurrentStep()?.IsComplete ?? true)
         {
+            Debug.Log("Tommy is better");
             anim.SetTrigger("better");
+            tommysToy.transform.position = theNPC.transform.position + new Vector3(-1f, 0f);
+            tommysToy.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("Check if we are carrying Tommy's Toy");
+            foreach (var item in PlayerCarriedItems.carriedItems)
+            {
+                Debug.Log($"Carrying {item}");
+                if (item == "Tommy's Toy")
+                {
+                    tommysToy.gameObject.SetActive(true);
+                }
+            }
         }
     }
 
@@ -58,6 +75,8 @@ public class TommyDialogue : MonoBehaviour
                 theImg.enabled = true;
                 anim.SetTrigger("better");
                 NPCText.text = "My toy dog! You found him! Thank you!!!";
+                GamePersistTasks.Tasks["Tommy"].GetCurrentStep()?.Complete();
+                tommysToy.gameObject.SetActive(false);
             }
         }
     }

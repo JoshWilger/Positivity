@@ -45,7 +45,7 @@ public class PlayerCarriedItems : MonoBehaviour
                     {
                         character.gameObject.SetActive(true);
                         character.transform.localPosition = Vector3.zero;
-                        character.transform.position = player.transform.position + new Vector3(3f, 0f, 0f);
+                        character.transform.position = player.transform.position + new Vector3(1f, 0f, 0f);
                     }
                 }
                 if (carriedItems[i] == "Bouquet")
