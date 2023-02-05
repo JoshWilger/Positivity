@@ -34,7 +34,7 @@ public class GameTask : MonoBehaviour
         }
 
         var step = Steps.Values.FirstOrDefault(s => s.IsComplete == false);
-        if (step == null)
+        if (step is null)
         {
             Debug.Log("all complete");
 
