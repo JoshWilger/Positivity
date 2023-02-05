@@ -90,6 +90,7 @@ public class ItemStick : MonoBehaviour
                 emptySound.Play();
             }
             rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
             theOtherObject = collision.gameObject;
             offset = transform.position - theOtherObject.transform.position;
         }

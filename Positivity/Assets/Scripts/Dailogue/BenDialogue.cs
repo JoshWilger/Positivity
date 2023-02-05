@@ -8,8 +8,10 @@ public class BenDialogue : MonoBehaviour
 {
     [SerializeField] private TMP_Text NPCText;
     [SerializeField] private Image theImg;
+    [SerializeField] private GameObject heart;
     [SerializeField] private TMP_Text pressSpace;
     [SerializeField] private GameObject theNPC;
+    [SerializeField] private GameObject theNPC2;
     [SerializeField] private GameObject character;
     [SerializeField] private GameObject thePlayer;
 
@@ -27,6 +29,7 @@ public class BenDialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        heart.SetActive(false);
         theImg.enabled = false;
         NPCText.text = "";
         pressSpace.text = "";
@@ -36,6 +39,7 @@ public class BenDialogue : MonoBehaviour
             //Set Ben to better
             anim.SetTrigger("better");
             anim2.SetTrigger("better");
+            heart.SetActive(true);
         }
     }
 
@@ -99,6 +103,7 @@ public class BenDialogue : MonoBehaviour
                 NPCText.text = "True love at last! Thank you!";
                 anim.SetTrigger("better");
                 anim2.SetTrigger("better");
+                heart.SetActive(true);
                 carlyScript.completed = true;
             }
         }
