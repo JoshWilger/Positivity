@@ -13,7 +13,6 @@ public class MargretDialogue : MonoBehaviour
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject thePlayer;
 
-    [SerializeField] private MissionClass mission;
     [SerializeField] private ItemStick stickScript;
     [SerializeField] private Animator anim;
 

@@ -12,7 +12,6 @@ public class CarlyDialogue : MonoBehaviour
     [SerializeField] private GameObject theNPC;
     [SerializeField] private GameObject thePlayer;
 
-    [SerializeField] private MissionClass mission;
     [SerializeField] private Animator anim;
 
     public bool completed = false;

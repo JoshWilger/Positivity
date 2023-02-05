@@ -8,7 +8,6 @@ public class ItemStick : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] objectives;
-    [SerializeField] private MissionClass mission;
 
     private Vector3 offset = new();
     private GameObject collidedObject = null;
@@ -85,7 +84,6 @@ public class ItemStick : MonoBehaviour
         if (completed)
         {
             Debug.Log("Completed");
-            mission.completed = true;
             if (completedSound == false)
             {
                 completedSound = true;

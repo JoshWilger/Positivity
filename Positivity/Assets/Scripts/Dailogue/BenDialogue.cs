@@ -31,7 +31,6 @@ public class BenDialogue : MonoBehaviour
         NPCText.text = "";
         pressSpace.text = "";
 
-        //If the mission os completed
         if (completed)
         {
             //Set Ben to better
@@ -88,7 +87,6 @@ public class BenDialogue : MonoBehaviour
         Debug.Log(collission.name);
         if (collission.gameObject == theNPC)
         {
-            //If the mission isn't completed yet
             if (!stickyScript.completed)
             {
                 //Show text box
