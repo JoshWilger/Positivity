@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class StartScreen : MonoBehaviour
 {
     public Animator animator;
+    public Animator music;
+
     private void Start()
     {
         //Default Player Position for later
@@ -19,6 +21,8 @@ public class StartScreen : MonoBehaviour
         animator.SetTrigger("FadeOut");
         GamePersistTasks.NewGame();
         PlayerCarriedItems.carriedItems = new string[] { };
+
+        music.enabled = true;
     }
     public void OnFadeComplete()
     {
