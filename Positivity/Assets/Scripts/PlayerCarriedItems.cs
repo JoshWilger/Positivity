@@ -40,10 +40,7 @@ public class PlayerCarriedItems : MonoBehaviour
                         tommysToy.transform.position = player.transform.position + new Vector3(1f, 0f, 0f);
                     }
                 }
-            }
-
-                }
-                else if (carriedItems[i] == "Character" || carriedItems[i] == "Character Variant")
+                if (carriedItems[i] == "Character" || carriedItems[i] == "Character Variant")
                 {
                     if (character != null)
                     {
@@ -53,13 +50,9 @@ public class PlayerCarriedItems : MonoBehaviour
                     }
                 }
             }
+
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
-
 }
+
