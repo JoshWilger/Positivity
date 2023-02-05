@@ -409,20 +409,32 @@ PrefabInstance:
       value: 565685937
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308544, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282010716562308544, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282010716562308544, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 78195b758e0174c40bde849e61d819b7, type: 3}
+    - target: {fileID: 2282010716562308544, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -430,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33
+      value: -0.66
       objectReference: {fileID: 0}
     - target: {fileID: 2282010716562308545, guid: 3af1306ee2d81a246aa2b8c9c45a14b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -502,7 +514,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
