@@ -435,7 +435,6 @@ MonoBehaviour:
   pressSpace: {fileID: 1281466111}
   theNPC: {fileID: 2282010715934975117}
   thePlayer: {fileID: 337843062}
-  mission: {fileID: 11400000, guid: 20cf4dc7f9756fd4785c8dae03c7b905, type: 2}
   anim: {fileID: 2282010715934975122}
   completed: 0
 --- !u!1 &657540836
@@ -1162,6 +1161,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: itemName
+      value: Carly
+      objectReference: {fileID: 0}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: characterName
+      value: Carly
+      objectReference: {fileID: 0}
     - target: {fileID: 5236167863556236898, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
       propertyPath: m_RootOrder
       value: 2

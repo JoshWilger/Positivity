@@ -12,7 +12,7 @@ public class ItemStick : MonoBehaviour
     //If I am Carly 
     [SerializeField] private GameObject otherCharacter; //BEN
     public string characterName = ""; //BEN
-    public string itemName = ""; //Carly
+    public string itemName = ""; //Carly - GameObject I am on
     public bool inHouse = false; //True
 
     private Vector3 offset = new Vector3();
@@ -38,14 +38,15 @@ public class ItemStick : MonoBehaviour
         {
             return;
         }
-        if (otherCharacter == null)
-        {
-            return;
-        }
         if (inHouse)
         {
+            //Can't attach if I don't know the other character
+            if (otherCharacter == null)
+            {
+                return;
+            }
             //Attach Object to character if complete
-            if (GamePersistTasks.Tasks[characterName].GetStep("Carly")?.IsComplete ?? false)
+            if (GamePersistTasks.Tasks[characterName].GetStep(itemName)?.IsComplete ?? false)
             {
                 transform.position = otherCharacter.transform.position + new Vector3(-1f, 0f);
             }
@@ -53,8 +54,10 @@ public class ItemStick : MonoBehaviour
         else
         {
             //Destroy Object if complete
-            if (GamePersistTasks.Tasks[characterName].GetStep("Carly")?.IsComplete ?? false)
+            if (GamePersistTasks.Tasks[characterName].GetStep(itemName)?.IsComplete ?? false)
             {
+                Debug.Log($"Remove {itemName}");
+                gameObject.SetActive(false);
                 Destroy(this);
             }
         }

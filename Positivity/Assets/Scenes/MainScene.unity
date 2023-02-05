@@ -1503,6 +1503,7 @@ MonoBehaviour:
   wateringCan: {fileID: 138921111}
   tommysToy: {fileID: 1264829754}
   character: {fileID: 1788678606}
+  bouquet: {fileID: 0}
 --- !u!1 &1129403075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1799,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1013978140}
   objectives: []
+  otherCharacter: {fileID: 0}
+  characterName: 
+  itemName: 
+  inHouse: 0
   completed: 0
   pickUpSound: {fileID: 798865395}
   emptySound: {fileID: 1920563111}
@@ -2129,6 +2134,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: itemName
+      value: Carly
+      objectReference: {fileID: 0}
+    - target: {fileID: -7128708986332480780, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
+      propertyPath: characterName
+      value: Carly
+      objectReference: {fileID: 0}
     - target: {fileID: 5236167863556236898, guid: ee492092e3981ae41adcbd611a1f9c1b, type: 3}
       propertyPath: m_RootOrder
       value: 11
