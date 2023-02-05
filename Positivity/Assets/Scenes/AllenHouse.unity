@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620623358}
   - component: {fileID: 620623357}
+  - component: {fileID: 620623359}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -352,6 +353,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &620623359
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620623356}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 5b2a3883880cf974280fac1f1448181b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 2108888707462850285, guid: 5b2a3883880cf974280fac1f1448181b, type: 2}
+    value: {fileID: 620623357}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &841641321
 GameObject:
   m_ObjectHideFlags: 0

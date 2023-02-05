@@ -1219,6 +1219,7 @@ MonoBehaviour:
   anim3: {fileID: 7969955}
   anim4: {fileID: 2031572913}
   anim5: {fileID: 1519547848}
+  timeline: {fileID: 1046600340}
 --- !u!1 &1085212282
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class BenDialogue : MonoBehaviour
     [SerializeField] private GameObject thePlayer;
 
     [SerializeField] private Animator anim;
+    [SerializeField] private Animator anim2;
     [SerializeField] private CarlyDialogue carlyScript;
     public ItemStick stickyScript;
 
@@ -35,6 +36,7 @@ public class BenDialogue : MonoBehaviour
         {
             //Set Ben to better
             anim.SetTrigger("better");
+            anim2.SetTrigger("better");
         }
     }
 
@@ -98,6 +100,7 @@ public class BenDialogue : MonoBehaviour
                 theImg.enabled = true;
                 NPCText.text = "True love at last! Thank you!";
                 anim.SetTrigger("better");
+                anim2.SetTrigger("better");
                 carlyScript.completed = true;
             }
         }

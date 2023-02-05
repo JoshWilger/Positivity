@@ -729,6 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290269651}
   - component: {fileID: 1290269650}
+  - component: {fileID: 1290269652}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -847,6 +848,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1290269652
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290269649}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 8bc404f92ab22aa4f8d8cce71f81dcfd, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 2905222079052455127, guid: 8bc404f92ab22aa4f8d8cce71f81dcfd, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1382048248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1256,8 @@ MonoBehaviour:
   character: {fileID: 0}
   thePlayer: {fileID: 842298075}
   anim: {fileID: 900139534}
-  carlyScript: {fileID: 0}
+  anim2: {fileID: 1994308994}
+  carlyScript: {fileID: 1803786792}
   stickyScript: {fileID: 1994308990}
 --- !u!114 &1803786786
 MonoBehaviour:
