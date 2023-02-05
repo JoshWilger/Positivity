@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2282010716562308545}
   - component: {fileID: 2282010716562308544}
   - component: {fileID: 2282010716562308551}
+  - component: {fileID: 3758739809690409519}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -190,3 +191,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3758739809690409519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2282010716562308550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7cc516b2d3fb04b8f647de0d3c0bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCText: {fileID: 0}
+  theImg: {fileID: 0}
+  pressSpace: {fileID: 0}
+  theNPC: {fileID: 0}
+  thePlayer: {fileID: 0}
+  mission: {fileID: 0}
+  stickScript: {fileID: 0}
