@@ -47,7 +47,7 @@ public class GamePersistTasks : MonoBehaviour
     {
         foreach (var task in Tasks.Values)
         {
-            if (task.CheckComplete())
+            if (!task.CheckComplete())
             {
                 Debug.Log($"Task not complete {task.Name}");
                 return false;
