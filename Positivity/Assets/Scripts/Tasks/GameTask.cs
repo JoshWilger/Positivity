@@ -14,17 +14,17 @@ public class GameTask : MonoBehaviour
 
     public bool CheckComplete()
     {
-
+        bool allComplete = true;
         foreach (var step in Steps.Values)
         {
             if (step.IsComplete == false)
             {
-                Debug.Log($" Task {Name} Step {Name} is not complete");           
-                return false;
+                Debug.Log($" Task {Name} Step {Name} is not complete");
+                allComplete = false;
             }
         }
         
-        return true;
+        return allComplete;
 
     }
 

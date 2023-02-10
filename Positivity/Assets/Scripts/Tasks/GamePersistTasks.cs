@@ -45,16 +45,20 @@ public class GamePersistTasks : MonoBehaviour
 
     public static bool CheckComplete()
     {
+        bool allComplete = true;
         foreach (var task in Tasks.Values)
         {
-            if (task.CheckComplete())
+            if (task.CheckComplete() == false)
             {
                 Debug.Log($"Task not complete {task.Name}");
-                return false;
+                allComplete = false;
             }
         }
-        Debug.Log("All Tasks are Complete!!!!!");
+        if (allComplete)
+        {
+            Debug.Log("All Tasks are Complete!!!!!");
+        }
         //SceneManager.LoadScene("Ending");
-        return true;
+        return allComplete;
     }
 }
